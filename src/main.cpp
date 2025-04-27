@@ -44,10 +44,10 @@ ZERO_TRACKER_NO_ODOM,
 //You will input whatever motor names you chose when you configured your robot using the sidebar configurer, they don't have to be "Motor1" and "Motor2".
 
 //Left Motors:
-motor_group(LF,LM,LB),
+motor_group(Left),
 
 //Right Motors:
-motor_group(RF,RM,RB),
+motor_group(Right),
 
 //Specify the PORT NUMBER of your inertial sensor, in PORT format (i.e. "PORT1", not simply "1"):
 PORT1,
@@ -130,7 +130,7 @@ void pre_auton() {
     Brain.Screen.printAt(5, 120, "Selected Auton:");
     switch(current_auton_selection){
       case 0:
-        Brain.Screen.printAt(5, 140, "Messing Around");
+        Brain.Screen.printAt(5, 140, "Default");
         break;
       case 1:
         Brain.Screen.printAt(5, 140, "Auton 2");
@@ -175,28 +175,28 @@ void autonomous(void) {
   auto_started = true;
   switch(current_auton_selection){ 
     case 0:
-      messingAround();
+      Default();
       break;
     case 1:         
-      drive_test();
+      //auton2();
       break;
     case 2:
-      turn_test();
+      //auton3();
       break;
     case 3:
-      swing_test();
+      //auton4();
       break;
     case 4:
-      full_test();
+      //auton5();
       break;
     case 5:
-      odom_test();
+      //auton6();
       break;
     case 6:
-      tank_odom_test();
+      //auton7();
       break;
     case 7:
-      holonomic_odom_test();
+      //auton8();
       break;
  }
 }

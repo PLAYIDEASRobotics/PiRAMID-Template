@@ -14,10 +14,14 @@ void ArcadeDrive(double speed, double turn) {
 }
 
 void SmoothArcadeDrive(double speed, double turn) {
+  /*changing the filter parameter changes the smoothness*/
   static CheckLib::LowPassFilter s_SpeedFilter(0.005);
   static CheckLib::LowPassFilter s_TurnFilter(0.05);
 
-  speed *= fabs(speed) / 100.0;
+  /* changing the accelVal below changes how fast the robot can accelerate to the max speed */
+  float accelVal = 100.0;
+
+  speed *= fabs(speed) / accelVal;
 
   speed = s_SpeedFilter.get(speed);
   turn = s_TurnFilter.get(turn);
