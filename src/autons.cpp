@@ -6,6 +6,8 @@
  * drive_distance(). For explanations of the difference between
  * drive, heading, turning, and swinging, as well as the PID and
  * exit conditions, check the docs.
+ * Do not change the constant functions
+ * Only edit the parameters inside
  */
 
 void default_constants(){
@@ -37,8 +39,24 @@ void odom_constants(){
 }
 
 /**
- * The expected behavior is to return to the start position.
+ * Make auton functions below this line to be used later
+ * ie. intake spin functions, or arm raise to certain height function
+ * void intake(){
+ *  intakeMotor.spin(fwd,12,volt);
+ * }
  */
+
+
+
+
+
+/**
+ * Default auton
+ * Make new autons by creating a new function
+ * Add those new autons to autons.h in the include folder
+ * Then change the autons and pre autons in main.cpp
+ */
+
 
 void Default(){
   chassis.drive_distance(12);
