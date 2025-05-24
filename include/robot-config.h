@@ -19,6 +19,8 @@ extern motor RB;
 
 extern motor_group Right;
 
+extern inertial ini;
+
 extern controller cntl;
 
 void  vexcodeInit( void );

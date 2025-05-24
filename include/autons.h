@@ -7,4 +7,4 @@ extern Drive chassis;
 
 void default_constants();
 
-void Default();
+void auton1();

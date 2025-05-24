@@ -44,13 +44,13 @@ ZERO_TRACKER_NO_ODOM,
 //You will input whatever motor names you chose when you configured your robot using the sidebar configurer, they don't have to be "Motor1" and "Motor2".
 
 //Left Motors:
-motor_group(Left),
+motor_group(LF,LM,LB),
 
 //Right Motors:
-motor_group(Right),
+motor_group(RF,RM,RB),
 
 //Specify the PORT NUMBER of your inertial sensor, in PORT format (i.e. "PORT1", not simply "1"):
-PORT1,
+PORT20,
 
 //Input your wheel diameter. (4" omnis are actually closer to 4.125"):
 2.75,
@@ -175,7 +175,7 @@ void autonomous(void) {
   auto_started = true;
   switch(current_auton_selection){ 
     case 0:
-      Default();
+      auton1();
       break;
     case 1:         
       //auton2();
@@ -225,8 +225,8 @@ void usercontrol(void) {
 
     //Replace this line with chassis.control_tank(); for tank drive 
     //or chassis.control_holonomic(); for holo drive.
-    //chassis.control_arcade();
-    DriveSmoothing();
+    chassis.control_arcade();
+    //DriveSmoothing();
     wait(20, msec); // Sleep the task for a short amount of time to
                     // prevent wasted resources.
   }

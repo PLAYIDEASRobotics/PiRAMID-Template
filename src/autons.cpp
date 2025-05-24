@@ -58,7 +58,7 @@ void odom_constants(){
  */
 
 
-void Default(){
+void auton1(){
   chassis.drive_distance(12);
   chassis.turn_to_angle(90);
   chassis.drive_distance(6);
