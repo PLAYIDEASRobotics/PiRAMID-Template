@@ -225,8 +225,8 @@ void usercontrol(void) {
 
     //Replace this line with chassis.control_tank(); for tank drive 
     //or chassis.control_holonomic(); for holo drive.
-    chassis.control_arcade();
-    //DriveSmoothing();
+    //chassis.control_arcade();
+    DriveSmoothing();
     wait(20, msec); // Sleep the task for a short amount of time to
                     // prevent wasted resources.
   }
